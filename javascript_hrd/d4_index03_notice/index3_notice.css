@@ -1,0 +1,13 @@
+#content {
+  padding: 10px;
+  border: 1px solid blue;
+  border-radius: 20px;
+}
+ul {
+  list-style: none;
+}
+button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

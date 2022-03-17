@@ -1,0 +1,1 @@
+let popWin = window.open("index4_popup_notice.html","pop","width=750, height=600")

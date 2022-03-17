@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for_자리배치도_테이블</title>
+    <style>
+        table{
+            text-align: center;
+        }
+        tr{display: flex;
+            flex-direction: row;
+            /* justify-content: center; */
+        } 
+        td{
+            border: 1px solid black;
+            width: 100px;    
+        }
+
+        /* table{
+            border-collapse :collapse;
+        } */
+    </style>
+</head>
+<body>
+    <h2>for문_자리배치도</h2>
+    
+    <script>
+
+       document.write('<h4> for 문을 이용 </h4>')
+
+        var memNum = prompt('입장객수'); // 입장객 수 : 56명
+        var colNum = prompt('한줄에 앉을 인원'); // 한줄에 앉을 사람 수 : 5명
+        var rowNum; //줄개수 : 2줄
+        // rowNum = parseInt(memNum / colNum);
+        // rowNum = memNum / colNum;
+        if(memNum % colNum == 0){
+            rowNum = parseInt(memNum / colNum) ;
+        }
+        else{
+             rowNum = parseInt(memNum / colNum) +1 ;
+            }
+        var sum1 = 1;
+        
+        document.write('<table>')
+
+            for(var a=1; a<=rowNum; a++){
+
+                document.write('<tr>')
+
+                    for(b=1; b<=colNum; b++){
+                        // sum += 1;
+                        document.write('<td> 좌석 ' , sum1 , '</td>')
+                        
+                        // sum1이 입장객수(memNum)보다 작거나 같을때까지 실행문 수행
+
+                        if(sum1 < memNum){
+                            sum1 +=1;
+                        }
+                        else{
+                            break;
+                        }
+                    }
+
+                document.write('</tr>')
+
+            }
+        document.write('</table>')
+
+
+    //   document.write('<p> 좌석 ' , i , '</p>')
+
+    </script>
+</body>
+</html>

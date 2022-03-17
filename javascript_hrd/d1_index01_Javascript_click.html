@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+
+</head>
+<body>
+    <h1 id="heading">자바스크립트</h1>
+    <p id="text">위 텍스트를 클릭해 보세요</p>
+        <br>
+        <hr>
+        <br>
+    <h2 class="h2">자바스크립트2</h2>
+    <p class="txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+
+    <script>
+        var heading = document.querySelector('#heading');
+        heading.onclick =function(){
+            heading.style.color = "red";
+        }
+        var txt = document.querySelector(".txt");
+        txt.onclick =function(){
+            txt.style.color = "red";
+        }
+        alert("안녕하세요");
+    </script>
+    <!-- <script src="index01_Javascript.js"></script> -->
+
+</body>
+</html>

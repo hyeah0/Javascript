@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+#container {
+  width: 600px;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid black;
+  background-color: rgb(214, 214, 214);
+}
+
+/* ===========구조=========== */
+
+#prod-pic,
+#desc {
+  float: left;
+}
+
+/* ===========이미지=========== */
+
+#prod-pic {
+  margin: 20px 20px auto 10px;
+  padding: 0;
+}
+
+#cup {
+  width: 200px;
+  height: 220px;
+  /* background-size: contain;
+  background-position: center center; */
+  box-shadow: 1px 1px 2px #222;
+  outline: 1px dashed #ccc;
+  outline-offset: -10px;
+}
+
+#small-pic {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#small-pic img:hover {
+  cursor: pointer;
+}
+
+.small {
+  width: 65px;
+}
+
+/* ===========desc=========== */
+
+#desc {
+  width: 300px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+
+.blueText {
+  color: blue;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+#desc button {
+  width: 100%;
+  margin: 15px 20px;
+  padding: 10px 20px;
+}
+
+#desc a {
+  text-decoration: none;
+  font-size: 14px;
+  margin: 20px 0px;
+}
+
+/* ===========detail=========== */
+
+#detail hr {
+  clear: both;
+  border: 1px dashed #ffff;
+}
+
+#detail {
+  padding: 20px 0px;
+  display: none;
+}
+
+#detail li {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#detail h2 {
+  font-size: 15px;
+  color: #bebebe;
+  font-weight: normal;
+}
+
+#detail h3 {
+  font-size: 13px;
+  color: #bebebe;
+  font-weight: normal;
+  text-align: justify;
+}
+
+p {
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: justify;
+}

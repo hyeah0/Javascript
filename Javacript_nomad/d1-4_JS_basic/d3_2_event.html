@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1100">
+    <title>Javascript_노마드코더_이벤트</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <section class="event1">    
+        <h5 class="changeColor">색상 변경하기_mouseenter(css=hover느낌_마우스를 올리면 변경)</h5>
+        <h5 class="changeText">글자 변경하기_click</h5>
+        <div class="changeSize">박스크기변경_mouseenter(css=hover느낌_마우스를 올리면 변경)</div>
+        <dl>
+            <dt>이벤트 참조</dt>
+            <dd>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element" target="_blank">event 참조</a>
+            </dd>
+            <dd>
+                console.dir();<br/>
+                ㄴevent사용할 수 있는 것은 on 이 붙어있다. <br/>
+                ㄴ사용시에는 on 제외하고 사용 필요
+            </dd>
+        </dl>
+        <code>
+        <pre>
+        const chColor = document.querySelector(".changeColor");
+        const chText = document.querySelector(".changeText");
+        const chSize = document.querySelector(".changeSize");
+        
+        
+        console.dir(chColor);
+        
+        function handleChangeColor(){
+            chColor.style.color = "blue";
+        }
+        function handleChangeText(){
+            chText.innerText = "클릭함!"
+        }
+        function handleChangeSize(){
+            chSize.style.backgroundColor = "green";
+            chSize.style.width = "300px";
+        }
+        
+        chColor.addEventListener("mouseenter",handleChangeColor);
+        chText.addEventListener("click",handleChangeText);
+        chSize.addEventListener("mouseenter",handleChangeSize);
+        </pre>
+        </code>
+        <h3>2가지 이벤트 실행 방법</h3>
+        <ol>
+            <li>
+                <dl>
+                    <dt>addEventListener</dt>
+                    <dd>
+                        chColor.addEventListener("mouseenter",handleChangeColor);
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>변수명.이벤트함수 = function 명</dt>
+                    <dd>
+                        chColor.onmouseenter = handleChangeColor;        
+                    </dd>
+                </dl>
+            </li>
+        </ol>
+    </section>
+    <section class="windowEvent">
+        <h1>Window는 기본으로 제공한다</h1>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window#events" target="_blank">참조홈페이지(window 사용 event)</a>     
+        <code>
+        <pre>
+        function handleWindowResize(){
+            document.body.style.backgroundColor = "pink";
+        }
+        function handleWindowCopy(){
+            alert("복사했습니다!");
+        }
+        
+        window.addEventListener("resize",handleWindowResize);
+        window.addEventListener("copy",handleWindowCopy);
+        </pre>
+        </code>
+        <ol>
+            <li class="">
+                <dl>
+                    <dt></dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li class="">
+                <dl>
+                    <dt></dt>
+                    <dd></dd>
+                </dl>
+            </li>
+        </ol>
+    </section>
+    <!-- <section class="">       
+        <code>
+        <pre>
+       
+        </pre>
+        </code>
+        <ol>
+            <li class="">
+                <dl>
+                    <dt></dt>
+                    <dd></dd>
+                </dl>
+            </li>
+            <li class="">
+                <dl>
+                    <dt></dt>
+                    <dd></dd>
+                </dl>
+            </li>
+        </ol>
+    </section> -->
+    <script src="d3_2_event.js"></script>
+</body>
+</html>

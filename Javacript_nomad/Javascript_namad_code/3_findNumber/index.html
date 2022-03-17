@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Random Number Game</h1>
+    <form action="" id="guess-number-form">
+        <div class="between-number">
+            <label for="between-number__to">Generate a number between 0 and </label>
+            <input type="number" id="between-number__to" required>
+        </div>
+        <div class = "guess-number">
+            <label for="guess-number__input">Guess the number: </label>
+            <input type="number" id="guess-number__input" required>
+            <input type="submit" value="Play!" id="guess-number__button">
+        </div>
+    </form>
+    <p class="result_alert"></p>
+    <div class="game-result" >
+        <p class="game-result__text"></p>
+        <strong class="game-result__out"></strong>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

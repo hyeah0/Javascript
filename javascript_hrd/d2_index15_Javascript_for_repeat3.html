@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for_구구단</title>
+    <style>
+        div{
+            /* display:flex;
+            flex-direction: column; */
+            
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            border: 1px dashed gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>for로 구구단 만들기</h2>
+    <script>
+        
+        var a;
+        var b;
+        var multi;
+
+        for( a=2; a<=9; a++){
+
+            document.write( '<div>')
+
+            document.write('<p>', a,' 단 </p>')
+            for( b=1; b<=9; b++){
+                multi = a*b
+                document.write( '<p>' , a , 'X' , b , '=' , multi , '</p> ');
+            }
+            // document.write( a , 'X' , b , '=' , multi , '<br>');
+
+            document.write( '</div>')
+            }
+        
+
+    </script>
+</body>
+</html>

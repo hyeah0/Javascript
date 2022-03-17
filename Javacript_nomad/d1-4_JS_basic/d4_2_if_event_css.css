@@ -1,0 +1,9 @@
+h2 {
+  color: blue;
+}
+
+.active {
+  color: purple;
+  background-color: pink;
+  transition: all 0.8s ease-in-out;
+}

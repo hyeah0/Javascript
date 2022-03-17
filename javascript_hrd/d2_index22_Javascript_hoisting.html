@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function_함수</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>function_함수</h2>
+
+    <div class="hoisting">
+        <h4>호이스팅</h4>
+        <p>
+            hoisting : 함수가 실행되기 전 변수들을 범위의 최상단으로 올리는것
+        </p>
+        <p>
+            console.log("y is " + y) <br>
+            var y = 5; <br>
+            === > y is undefined
+        </p>
+        <p>
+            var y = 5; <br>
+            console.log("y is " + y) <br>
+            === > y is 5
+        </p>
+    </div>
+    
+    <script>
+
+        var x = 10;
+        // var y = 5;
+
+      function displayNumber(){
+
+        var y = 5;
+        console.log("x is " + x)
+        console.log("y is " + y)
+        // var y = 5;
+      }
+        
+      displayNumber();
+
+    //   호이스팅 예제
+
+    function addNumber(num1,num2){
+        console.log('num1 :' ,num1);
+        console.log('num2 :' ,num2);
+
+    }
+
+    // addNumber(10,20);
+    var sum = addNumber(10,20);
+    console.log(sum)
+
+    //return
+    function addNumber2(num3,num4){
+        console.log('num3 :' ,num3);
+        console.log('num4 :' ,num4);
+        return num3 + num4;
+
+    }
+    // addNumber(10,20);
+    var sum2 = addNumber2(10,20); //변수 선언, 함수호출
+    console.log(sum2);
+
+    sum2 = 50; // 변수 재 할당
+    console.log(sum2);
+
+    var sum2 =100; //재할당, 재선언
+    console.log(sum2);
+
+
+    
+    </script>
+</body>
+</html>

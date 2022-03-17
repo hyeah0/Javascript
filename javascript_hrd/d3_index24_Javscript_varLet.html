@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // var
+        var sum1 = 0;
+        var n = 10;
+
+        for(var i = 1; i < n +1; i++){
+            sum1 +=1;
+        }
+
+        console.log(sum1);
+
+        // function
+        var sum2 = 0;
+        var a = 10;
+
+        function calcSum(){
+                for(var i = 1; i < a +1; i++){
+                            sum2 +=1;
+                    }
+                    console.log(sum2);
+        }
+        calcSum();
+
+        // let
+
+        // let sum3 = 0;
+        // var b = 10;
+
+        function calcSum1(b){
+
+            let sum3 = 0;
+            // var b = 10;
+
+            for(let i = 1; i < b + 1; i++){
+                        sum3 +=1;
+                }
+                console.log('블록안에 sum : ' + sum3);
+
+        }
+    
+        // console.log('블록밖에 sum : ' + sum3);
+        calcSum1(10);
+
+
+    </script>
+</body>
+</html>

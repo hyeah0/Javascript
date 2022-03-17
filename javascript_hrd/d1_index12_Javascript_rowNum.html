@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리배치도 만들기</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <h2>자리배치도 만들기</h2>
+
+    
+
+    <script>
+        // 입력할 값의 변수 : 입장객수(memNum) , 한줄에 앉을 사람의 수 (colNum)
+        // 계산 값의 변수 : 필요한 줄의 개수 (rowNum)
+
+        // 조건 : 1줄에 5명 앉을 수 있음
+        // __ 입장객일 때 몇 줄이 필요할까요?
+
+        var memNum = prompt('입장객수를 적으시오',"");
+        var colNum = prompt('한 줄에 앉을 수 있는 인원수를 적으시오',"");
+
+        rowNum = memNum / colNum;
+
+        if(memNum % colNum == 0){
+            document.write("<p>입장객 " + memNum + "명, 한줄에 " , colNum , "명 앉을 수 있을때, 필요한 줄은 ", rowNum , "줄 입니다.<p>");
+        }
+        else{
+            rowNum = parseInt(memNum / colNum) + 1 ;
+            document.write("<p>입장객 " + memNum + "명, 한줄에 " + colNum + "명 앉을 수 있을때, 필요한 줄은 "+ rowNum + "줄 입니다.<p>");
+        }
+
+        rowNum = parseInt(memNum / colNum);
+        // rowNum = (memNum / colNum);
+
+        document.write("<p>입장객 " + memNum + "명, 한줄에 " + colNum + "명 앉을 수 있을때, 필요한 줄은 "+ rowNum + "줄 입니다.<p>")
+
+
+    </script>
+
+    <!-- <script src="index01_Javascript.js"></script> -->
+
+</body>
+</html>

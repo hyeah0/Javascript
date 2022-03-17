@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for</title>
+    <style>
+        div{
+            border: 1px dashed gray;
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            
+        }
+        pre{
+            width: 400px;
+            display: block;
+            overflow: auto;
+            border: 1px solid gray;
+        }
+    
+    </style>
+</head>
+<body>
+    <h2>for문 break</h2>
+    <code>
+        <pre>
+            for(i=2; i&lt;=9; i++){
+
+                document.write('&lt;div>')
+    
+                document.write( i , '단')
+                // if(i === 3 ){break};
+    
+                for(j=1; j&lt;=9; j++ ){
+                document.write( i , ' X ' , j , ' = ' , i*j )
+                // if(i === 3 ){break}; 
+                // 다른 구구단은 9까지 곱하지만 3단만 3x1만 나옴
+                }
+    
+                if(i === 3 ){break};
+                // 3단까지
+                document.write('&lt;/div>')
+            }
+            // if(i === 3 ){break};
+            // 오류
+        </pre>
+    </code>
+
+    <script>
+
+        for(i=2; i<=9; i++){
+
+            document.write('<div>')
+
+            document.write('<p>', i , '단</p>')
+            // if(i === 3 ){break};
+
+            for(j=1; j<=9; j++ ){
+            document.write('<p>', i , ' X ' , j , ' = ' , i*j ,'</p>')
+            // if(i === 3 ){break}; 
+            // 다른 구구단은 9까지 곱하지만 3단만 3x1만 나옴
+            }
+
+            if(i === 3 ){break};
+            // 3단까지
+            document.write('</div>')
+        }
+        // if(i === 3 ){break};
+        // 오류
+
+        while()
+
+    </script>
+</body>
+</html>

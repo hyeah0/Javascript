@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            margin : 0px;
+            padding : 0px;
+        }
+        #wrap{
+            width: 500px;
+            margin: 0px auto;
+        }
+        li{
+            width: 150px;
+            list-style: none;
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 5px 20px;   
+            border: 1px solid gray; 
+            display: block;
+            margin-bottom: 20px;
+        }
+        #content{
+            width: 500px;
+            height: 100vh;
+            border: 1px solid gray;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id = "wrap">
+        <ul>
+            <li><a href="#" onclick= "changeBg('green')">green</a></li>
+            <li><a href="#" onclick= "changeBg('orange')">orange</a></li>
+            <li><a href="#" onclick= "changeBg('purple')">purple</a></li>
+        </ul>  
+        <div id ="content">
+        </div>
+    </div>
+
+    <script>
+        function changeBg(color){
+            console.log(color);
+            let result = document.querySelector('#content');
+            console.log(result);
+            result.style.backgroundColor = color;
+        }
+    </script>
+    
+       <!-- <script src="_____.js"></script> -->
+</body>
+</html>

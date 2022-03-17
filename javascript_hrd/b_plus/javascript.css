@@ -1,0 +1,4 @@
+/* 글씨를 클릭시 글씨색 변경<js> */
+.clickText {
+  cursor: pointer;
+}

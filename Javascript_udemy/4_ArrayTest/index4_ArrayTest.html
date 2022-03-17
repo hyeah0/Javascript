@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_배열 테스트</title>
+    <style>
+        .array{
+            width: 800px;
+            height: 200px;
+            overflow: scroll;
+            display: block;
+        }
+        b{
+            background-color: black;
+            color: yellow;
+        }
+        li{
+            padding: 2px;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <h1>주어진 배열을 가지고 다음 질문에 코드를 짜시오</h1>
+    <h3>
+        배열
+    </h3>
+    <code class="array">
+        <pre>
+        let animals= [
+                        "Aardvark",
+                        "Albatross",
+                        "Alligator",
+                        "Alpaca",
+                        "Ant",
+                        "Ape",
+                        "Armadillo",
+                        "Donkey",
+                        "Baboon",
+                        "Badger",
+                        "Barracuda",
+                        "Bat",
+                        "Bear",
+                        "Beaver",
+                        "Bee",
+                        "Bison",
+                        "Cat",
+                        "Caterpillar",
+                        "Cattle",
+                        "Chamois",
+                        "Cheetah",
+                        "Chicken",
+                        "Chimpanzee",
+                        "Chinchilla",
+                        "Chough",
+                        "Clam",
+                        "Cobra",
+                        "Cockroach",
+                        "Cod",
+                        "Cormorant",
+                        "Dugong",
+                        "Dunlin",
+                        "Eagle",
+                        "Echidna",
+                        "Eel",
+                        "Eland",
+                        "Elephant",
+                        "Elk",
+                        "Emu",
+                        "Falcon",
+                        "Ferret",
+                        "Finch",
+                        "Fish",
+                        "Flamingo",
+                        "Fly",
+                        "Fox",
+                        "Frog",
+                        "Gaur",
+                        "Gazelle",
+                        "Gerbil",
+                        "Giraffe",
+                        "Grasshopper",
+                        "Heron",
+                        "Herring",
+                        "Hippopotamus",
+                        "Hornet",
+                        "Horse",
+                        "Kangaroo",
+                        "Kingfisher",
+                        "Koala",
+                        "Kookabura",
+                        "Moose",
+                        "Narwhal",
+                        "Newt",
+                        "Nightingale",
+                        "Octopus",
+                        "Okapi",
+                        "Opossum",
+                        "Quail",
+                        "Quelea",
+                        "Quetzal",
+                        "Rabbit",
+                        "Raccoon",
+                        "Rail",
+                        "Ram",
+                        "Rat",
+                        "Raven",
+                        "Red deer",
+                        "Sandpiper",
+                        "Sardine",
+                        "Sparrow",
+                        "Spider",
+                        "Spoonbill",
+                        "Squid",
+                        "Squirrel",
+                        "Starling",
+                        "Stingray",
+                        "Tiger",
+                        "Toad",
+                        "Whale",
+                        "Wildcat",
+                        "Wolf",
+                        "Worm",
+                        "Wren",
+                        "Yak",
+                        "Zebra"
+                    ]
+        </pre>
+    </code>
+    <h3>
+        문제
+    </h3>
+    <ol>
+        <li>어레이에 마지막 아이템 “Zebra” 제거하기 - <b>pop</b> </li>
+        <li>주어진 어레이에 “Dog” 추가하기 - <b>push</b></li>
+        <li>주어진 어레이에 “Mosquito”,“Mouse”,“Mule” 추가하기 - <b>push</b></li>
+        <li>해당 어레이에는 "Human"이 있는가? - <b>inculdes</b></li>
+        <li>해당 어레이에는 “Cat” 이 있는가? - <b>inculdes</b></li>
+        <li>"Red deer"을 "Deer"로 바꾸시오 - <b>인덱스번호이용/ animals([0])="___"</b></li>
+        <li>"Spider"부터 3개의 아이템을 기존 어레이에서 제거하시오 - <b>splice</b></li>
+        <li>"Tiger"이후의 값을 제거하시오 - <b>splice</b></li>
+        <li>"B"로 시작되는 아이템인 "Baboon"부터 "Bison"까지 가져와 새로운 어레이에 저장하시오 - <b>slice(시작부터, __ 번 이전까지)</b></li>
+    </ol>
+    <h3>
+        정답
+    </h3>
+    <code>
+        <pre>
+        console.log("-----1번문제-----");
+        animals.pop();
+        console.log(animals);
+        
+        console.log("-----2번문제-----");
+        animals.push("Dog");
+        console.log(animals);
+        
+        console.log("-----3번문제-----");
+        animals.push("Mosquito","Mouse","Mule");
+        console.log(animals);
+        
+        //복습필요//
+        console.log("-----4번문제-----");
+        console.log(animals.includes("Human"));
+        
+        console.log("-----5번문제-----");
+        console.log(animals.includes("Cat"));
+        
+        //*****//
+        console.log("-----6번문제-----");
+        console.log("-----Red deer을 Deer로 바꾸시오-----");
+        animals[animals.indexOf("Red deer")] = "Deer"
+        console.log(animals);
+        
+        console.log("-----7번문제-----");
+        console.log(animals.indexOf("Spider"));
+        console.log(animals.splice(animals.indexOf("Spider"),3));
+        console.log(animals);
+        
+        console.log("-----8번문제-----");
+        console.log(animals.indexOf("Tiger"));
+        console.log(animals.splice(animals.indexOf("Tiger")));
+        console.log(animals);
+        
+        console.log("-----9번문제-----");
+        console.log("-----B로 시작되는 아이템인 Baboon부터 Bison까지 가져와 새로운 어레이에 저장하시오-----");
+        console.log(animals.indexOf("Baboon"));
+        console.log(animals.indexOf("Bison"));
+        let newList = animals.slice(animals.indexOf("Baboon"),animals.indexOf("Bison")+1);
+        console.log(newList);
+        </pre>
+    </code>
+
+    <script src="index4_ArrayTest.js"></script>
+</body>
+</html>

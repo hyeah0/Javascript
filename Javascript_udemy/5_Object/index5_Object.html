@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_Object(객체)</title>
+</head>
+<body>
+    <dl>
+        <dt>객체 (자료형)</dt>
+        <dd>한 데이터에 많은 정보가 필요할때</dd>
+    </dl>
+    <code>
+        <pre>
+            let patient = {
+                name : "Kim",
+                age : 18,
+                disease : "cold"
+                키값 : 값
+            }
+
+            console.log(patient);  ==> {name: 'Kim', age: 18, disease: 'cold'}
+            console.log(patient.name); ==> Kim
+            console.log(patient["name"]); ==> Kim
+
+            patient.name = "Lee"
+            console.log(patient.name); ==> Lee
+
+            //객체와 배열 동시사용
+            let patientList = [{name:"Kim",age:10},{name:"Lee",age:13},{name:"Park",age:16}];
+
+            console.log(patientList);
+            console.log("첫번째 환자는 : " , patientList[0]); ==> {name:"Kim",age:10}
+            console.log("첫번째 환자의 나이는? : " , patientList[0].age); ==> 10
+        </pre>
+    </code>
+
+    <script src="index5_Object.js"></script>
+</body>
+</html>

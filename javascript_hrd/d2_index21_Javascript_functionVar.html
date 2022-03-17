@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function_함수</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h2>function_함수</h2>
+    
+    <script>
+
+        var a = Number(prompt('숫자를 입력하세요.')) ;
+        var b = Number(prompt('숫자를 입력하세요.')) ;
+        
+        function addNumber(){
+
+            console.log(a);
+            var sum = a + b ;
+            alert(sum);
+            document.write('<p>', sum ,'</p>')
+        }
+
+        // document.write('<p>', sum ,'</p>')
+        // ㄴ var sum  : var 사용으로 지역변수 선언 
+        // 범위 제약으로 addNumber 범위를 나가서는 사용이 안된다.
+
+        addNumber();
+        addNumber();
+
+        function addNumber(){
+
+        console.log(a);
+        sum1 = a + b ;
+        alert(sum1);
+        document.write('<p>', sum1 ,'</p>')
+        }
+
+        document.write('<p> sum :', sum1 ,'</p>')
+        // ㄴ sum : var를 쓰지않아 전역변수,
+        //  addNumber 범위를 나가서는 사용이 가능하다
+        addNumber();
+        addNumber();
+
+        
+        
+
+        
+      
+    </script>
+</body>
+</html>

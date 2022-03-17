@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_function(함수 테스트)</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        .test3box pre,
+        .test4box pre,
+        .test5box pre{
+            width: 500px;
+            display: block;
+            overflow: auto;
+
+            background-color: rgba(136, 136, 136, 0.322);
+            line-height: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <section id="test1">
+        <h1>문제1</h1>
+        <p>
+            "안녕 내 이름은 제시카야"라는 문장을 프린트하는 함수 'greet’를 만드시오
+        </p>
+        <div id="test1_result"></div>
+        <code>
+            <pre>
+            let test1 = document.getElementById("test1_result");
+            let great = "안녕 내 이름은 제시카야";
+            test1.textContent = great;
+            </pre>
+        </code>
+    </section>
+    <section id="test2">
+        <h1>문제2</h1>
+        <p>
+            이름을 매개변수로 전달받아 다양한 이름을 프린트 할 수 있게 함수를 수정하시오 예) “안녕 내 이름은 에밀리야”, “안녕 내 이름은 할리야”
+        </p>
+        <div>
+            <input id="test2_name" type="text" placeholder="이름을 입력하세요.">
+            <button id="test2_button" type="button" >클릭</button>
+            <div id="test2_result"></div>
+        </div>
+        <code>
+            <pre>
+            
+            </pre>
+        </code>
+    </section>
+    <section id="test3">
+        <h1>문제3</h1>
+        <p>
+            meetAt 함수를 만들어주세요.
+        </p>
+        <div class="test3box">
+            <pre>
+            인자를 세개 받습니다.
+            첫번째 인자는 년도에 해당하는 숫자입니다.
+            두번째 인자는 월에 해당하는 숫자입니다.
+            세번째 인자는 일에 해당하는 숫자입니다.
+            년도 인자만 받았을 경우 → "1234년" 과 같은 형식의 문자열을 리턴 해주세요.
+            년도,월 인자를 받았을 경우 → 년도와 월을 조합해서 "1234년 5월" 과 같은 형식의 문자열을 리턴 해주세요.
+            년도,월,일 인자를 전부 받았을 경우 → 년도,월,일을 조합해서 "1234/5/6" 과 같은 형식의 문자열을 리턴 해주세요.
+            </pre>
+        </div>
+        <!-- <input id="test3_date" type="date"> -->
+        <div id="test3_result"></div>
+        <code>
+            <pre>
+                let test3Result = document.getElementById("test3_result");
+
+                function meetAt(year, month, date){
+                    let todayYear = year;
+                    let todayMonth = month;
+                    let todayDate = date;
+               
+                    if(todayDate){
+                        return `${todayYear}/${todayMonth}/${todayDate}`
+                    }
+                    if(todayMonth){
+                       return `${todayYear}년${todayMonth}월`
+                   }
+                   if(todayYear){
+                       return `${todayYear}년`
+                   }
+                }
+               
+                console.log(meetAt(2022,01,31));
+                console.log(meetAt(2022,01));
+                console.log(meetAt(2022));
+            </pre>
+        </code>
+    </section>
+    <section id="test4">
+        <h1>문제4</h1>
+        <p>
+            findSmallestElement 함수를 구현해 주세요.
+        </p>
+        <div class="test4box">
+            <pre>
+            findSmallestElement 의 arr 인자는 숫자 값으로만 이루어진 배열입니다.
+            arr 의 값들 중 가장 작은 값을 리턴 해주세요.
+            만일 arr 가 비어있으면 0을 리턴 해주세요.
+            예를 들어, 다음과 같은 배열이 인자(input)으로 들어왔다면 1이 리턴 되어야 합니다.
+            이용되는 배열
+            [100,200,3,0,2,1]
+            </pre>
+        </div>
+        <div>
+            <input id="test4_number" type="number">
+            <button id="test4_button"  type="button">클릭</button>
+            <button id="test4_reset" type="reset">리셋</button>
+            <div id="test4_result">가장 작은 숫자는 ?</div>
+        </div>
+        
+        <code>
+            <pre>
+            
+            </pre>
+        </code>
+    </section>
+    <section id="test5">
+        <h1>문제5</h1>
+        <p>
+            돈을 매개변수로 받으면 몇개의 지폐와 동전이 필요한지 최소 개수를 계산해주는 함수를 만드시오
+        </p>
+        <div class="test5box">
+            <pre>
+            예시)
+            12,300인 경우 
+            50000 X 0
+            10000 X 1
+            5000  X 0
+            1000 X 2
+            500 X 0
+            300 X 3
+            </pre>
+        </div>
+        <div>
+            <input id="test5_number" type="number">
+            <button id="test5_button"  type="button">클릭</button>
+            <p id="test5_result"></p>
+        </div>
+        
+        <code>
+            <pre>
+                let unit = [50000,10000,5000,1000,500,100];
+                let test5number = document.getElementById("test5_number");
+                let test5button = document.getElementById("test5_button");
+                let test5Result = document.getElementById("test5_result");
+                let test5History =[];
+                
+                test5button.addEventListener("click",test5);
+                
+                function test5(){
+                    let test5numberV = test5number.value;
+                
+                    for(let i=0; i&lt;unit.length; i++){
+                        
+                        let num = Math.floor(test5numberV/unit[i]);
+                        let result = unit[i]+"x"+num;
+                        test5History.push(result);
+                        console.log(unit[i]+"x"+num);
+                
+                        test5numberV = test5numberV - (unit[i]*num);
+                        // console.log("test5numberV : "+ test5numberV);
+                    }
+                    test5Result.innerHTML = test5History;
+            </pre>
+        </code>
+    </section>
+
+    <script src="index11_Function_Test.js"></script>
+</body>
+</html>

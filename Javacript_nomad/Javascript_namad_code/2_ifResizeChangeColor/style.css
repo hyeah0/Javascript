@@ -1,0 +1,14 @@
+/* h1 {
+  color: blue;
+} */
+.activeSmall {
+  background-color: blue;
+}
+
+.activeMedium {
+  background-color: purple;
+}
+
+.activeBig {
+  background-color: yellow;
+}

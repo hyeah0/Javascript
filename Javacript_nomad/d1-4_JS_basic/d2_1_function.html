@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript_노마드코더</title>
+</head>
+<body>
+    <ul>
+        <li> function_1
+            <dl>
+                <dt>function</dt>
+                <dd>
+                    <code>
+                    <pre>
+                    function sayHello(nameOfPerson, age){
+                        console.log('hi my name is ' , nameOfPerson , 'i am ' , age );
+                    }
+                    
+                    sayHello("Kim", 15);
+                    sayHello("Lee", 30);
+
+                    hi my name is  Kim i am  15
+                    hi my name is  Lee i am  30
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li>
+        <li> function_2
+            <dl>
+                <dt>function</dt>
+                <dd>
+                    <code>
+                    <pre>
+                    function plus(a,b){
+                        console.log(a , "+" , b , "=", a+b);
+                    }
+                    
+                    plus(2,30);
+                    2 '+' 30 '=' 32
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li>
+        <li> function_3
+            <dl>
+                <dt>function</dt>
+                <dd>
+                    object 사용, object안에 function 사용
+                    <code>
+                    <pre>
+                    const player = {
+                        name: "Kim",
+                        sayHello: function(otherPersonsName){
+                            console.log("hello", otherPersonsName);
+                        }
+                    };
+                    console.log(player);
+                    console.log(player.name);
+                    player.sayHello("Hue");
+
+                    {name: 'Kim', sayHello: f}
+                    Kim
+                    hello Hue
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li>
+        <li> function_4_return 순서
+            <dl>
+                <dt></dt>
+                <dd>
+                    <code>
+                    <pre>
+                    const age = 96;
+
+                    function calculateKrAge(ageOfForeigner){
+                        return ageOfForeigner +2 ; 
+                    }
+                    
+                    const krAge = calculateKrAge(age);
+                    console.log(krAge);
+                    </pre>
+                    </code>
+                    <ol>실행순서
+                        <li>
+                            <code>
+                            <pre>
+                            const age = 96;
+
+                            function calculateKrAge(ageOfForeigner){
+                                return ageOfForeigner +2 ; 
+                            }
+                            
+                            const krAge = calculateKrAge(96);
+                            console.log(krAge);   
+                            </pre>
+                            </code>
+                        </li>
+                        <li>
+                            <code>
+                            <pre>
+                            const age = 96;
+
+                            function calculateKrAge(96){
+                                return ageOfForeigner +2 ; 
+                            }
+                            
+                            const krAge = calculateKrAge(96);
+                            console.log(krAge);   
+                            </pre>
+                            </code>
+                        </li>
+                        <li>
+                            <code>
+                            <pre>
+                            const age = 96;
+
+                            function calculateKrAge(96){
+                                return 96 +2 ; 
+                            }
+                            
+                            const krAge = calculateKrAge(96);
+                            console.log(krAge);   
+                            </pre>
+                            </code>
+                        </li>
+                        <li>
+                            <code>
+                            <pre>
+                            const age = 96;
+
+                            function calculateKrAge(96){
+                                return 96 +2 ; 
+                            }
+                            
+                            const krAge = 98
+                            console.log(krAge);   
+                            </pre>
+                            </code>
+                        </li>
+                        <li>
+                            <code>
+                            <pre>
+                            const age = 96;
+
+                            function calculateKrAge(96){
+                                return 96 +2 ; 
+                            }
+                            
+                            const krAge = 98
+                            console.log(krAge); 
+                            
+                            98
+                            </pre>
+                            </code>
+                        </li>
+                    </ol>
+                </dd>
+            </dl>
+        </li>
+        <li> function_5_return 순서
+            <dl>
+                <dt></dt>
+                <dd>
+                    { return }이후 코드는 실행이 되지 않는다
+                    <code>
+                    <pre>
+                    const caculator = {
+                        add: function(a,b){
+                            return a+b;
+                            console.log("bye"); -- retrun 이후 실행문이라, 실행되지 않는다.
+                        },
+                        minus: function(a,b){
+                            return a-b;
+                        },
+                        div: function(a,b){
+                            return a/b;
+                        },
+                        };
+                    
+                        const addNum = caculator.add(2,40);
+                        console.log(caculator);
+                        console.log(addNum);
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li>
+        <!-- <li> 
+            <dl>
+                <dt></dt>
+                <dd>
+                    
+                    <code>
+                    <pre>
+                   
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li> -->
+    </ul>
+    <script src="d2_1_function.js"></script>
+</body>
+</html>

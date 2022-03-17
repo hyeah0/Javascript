@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="javascript.css">
+</head>
+<body>
+    <section id="clickChangeColor">
+        <h1>글씨 클릭시 색깔변경하기</h1>
+        <p class="clickText">글씨를 클릭하세요</p>
+        <code>
+            <pre>
+                let clickText = document.querySelector(".clickText");
+                clickText.onclick = function(){
+                                                 clickText.style.color = "pink";
+                                               }
+            </pre>
+        </code>
+    </section>
+        <hr>
+    <section id="alert">
+        <h1>알림창</h1>
+        <code>
+            <pre>
+                <strong>// 알림창</strong>
+                alert("자바스크립트 복습");
+
+                <strong>//확인 취소 알림창</strong>
+                let reply = confirm("저장하시겠습니까?");
+                console.log(reply);
+
+                <strong>//입력 알림창</strong>
+                let favBread = prompt("좋아하는 빵을 적어주세요","메론빵");
+                console.log(favBread);
+                <strong>//입력값 화면에 보이기</strong>
+                let myFavBread = document.getElementById("myFavBread");
+                    myFavBread.textContent=("내가 좋아하는 " + favBread);
+            </pre>
+        </code>
+        <section id="htmlwrite1">
+            <h2>promt입력값 화면에 보이기1</h2>
+            <div id="myFavBread"></div>
+        </section>
+    </section>
+        <hr>
+    <section id="htmlwrite2">
+        <h2>promt입력값 화면에 보이기2</h2>
+        <div id="time"></div>
+        <code>
+            <pre>
+                let currentTime = document.getElementById("time");
+                let now = new Date();
+                let h = now.getHours();
+                let display = now.toLocaleDateString();
+
+                currentTime.innerHTML=("오늘은 : "+ display + "<br> 현재시간은 : " + h + "시 입니다.");
+            </pre>
+        </code>
+    </section>
+        <hr>
+    <section id="if_andOr_switch">
+        <div id="if">
+            <h1>if</h1>
+                <section class="if_1">
+                    <h4>입력값에 따라 결과값 반환</h4>
+                    <input id="userInput_Num1" type="number" />
+                    <input id="userInput_Num2" type="number" />
+                    <button id="number_button">입력완료</button>
+                    <div id="result_Area">작성값</div>
+                    <div id="if">조건 : 한개라도 공란일 경우 , 두숫자 5이상일경우 안내문</div>
+                </section>
+                <section class="if_1">
+                    <h4>몇 줄이 필요한지?</h4>
+                    <label for="total">입장객</label>
+                    <input id ="total" type="number"/>
+                    <label for="person">한줄에 앉을 수 있는 인원수</label>
+                    <input id="person" type="number"/>
+                    <button id="set" type="button">입력하기</button>
+                    <p id="seats"></p>
+                </section>
+        </div>
+            
+        <div id="switchCase">
+            <h2>switchCase</h2>
+            <label>금은동 메달별 상금</label>
+            <input id="medalType" type="text" placeholder="금, 은, 동 중 한개 입력하세요"></input>
+            <button id="medalCheck" type="button">확인하기</button>
+            <div id="medalPrice">상금은?</div>
+            <!-- <form action="">  
+                <fieldset>
+                    <legend>
+                        자판기
+                    </legend>
+                    <input id="milkCoffee" type="radio" name="vending">
+                        <label for="milkCoffee">밀크커피</label>
+                    <input id="blackCoffee" type="radio" name="vending">
+                        <label for="blackCoffee">블랙커피</label>
+                    <input id="milk" type="radio" name="vending">
+                        <label for="milk">우유</label>
+                    <input id="yulmuTea" type="radio" name="vending">
+                        <label for="yulmuTea">율무차</label>
+                    <button type="button" id="choose">주문하기</button>
+                </fieldset>
+            </form> -->
+        </div>
+    </section>
+        <hr>
+    <script src="javascript.js"></script>
+</body>
+</html>

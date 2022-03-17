@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for_홀짝끼리 더하기</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        pre{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>for문</h2>
+    
+    <script>
+       
+       document.write('<code><pre> for(var i=1 , sum=0 ; i<=10; i++) </pre></code>')
+
+        for(var i=1 , sum=0 ; i<=10; i++){
+            document.write('<p> i = ', i , '----- (sum + i) = ' , (sum + i),'</p>')
+        }
+        
+
+        document.write('<p>================================</p>')
+
+        document.write('<code><pre> for(var i=1 , sum=0 ; i<=10; i++) </pre></code>')
+
+        for(var i=1 , sum=0 ; i<=10; i++){
+            document.write('<p> i = ', i , '----- (sum += i) = ' , (sum += i),'</p>')
+        }
+
+        document.write('<p>================================</p>')
+
+        document.write('<h2> 짝수끼리 더하기 </h2>')
+
+        document.write('<code><pre> for(var i=1 , sum=0 ; i<=10; i++) <br> if(i % 2 === 1) continue; </pre></code>')
+        document.write('<p> 남은 수가 1일때 실행문을 실행하지 않는다 </p>')
+
+        for(var i=1, sum=0; i<=10; i++){
+
+            if(i % 2 === 1){
+                continue;
+
+                // 남은 수가 1일때 document 실행문을 실행하지 않는다
+            }
+            document.write('<p> i = ', i , '----- (sum += i) = ' , (sum += i),'</p>')
+        }
+
+        document.write('<p>================================</p>')
+
+        document.write('<h2> 홀수끼리 더하기 </h2>')
+
+        document.write('<code><pre> for(var i=1 , sum=0 ; i<=10; i++) <br> if(i % 2 === 0) continue; </pre></code>')
+        document.write('<p> 남은 수가 0일때 실행문을 실행하지 않는다 </p>')
+
+        for(var i=1, sum=0; i<=10; i++){
+
+            if(i % 2 === 0){
+                continue;
+
+                // 남은 수가 1일때 document 실행문을 실행하지 않는다
+            }
+            document.write('<p> i = ', i , '----- (sum += i) = ' , (sum += i),'</p>')
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트_for_while(반복문_테스트)</title>
+    <style>
+        table{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <section id="test1">
+        <h1>문제1</h1>
+        <p>
+            1부터 100까지 더하는 for문을 만들고 결과를 출력하시오.
+        </p>
+        <code>
+            <pre>
+            let sum=0;
+            for(let i=0; i&lt;=100; i++){
+                sum += i ;
+            }
+            console.log(sum);
+            </pre>
+        </code>
+    </section>
+    <section id="test2">
+        <h1>문제2</h1>
+        <p>
+            1부터 100까지 홀수만 출력하시오.
+        </p>
+        <code>
+            <pre>
+            for(let j=1; j&lt;=100; j+=2){
+                console.log("홀수:" + j);
+            }
+            <strong>j가 100보다 작을때까지 j에 2씩 더한다</strong>
+            </pre>
+        </code>
+    </section>
+    <section id="test3">
+        <h1>문제3</h1>
+        <p>
+            1부터 50까지 369 결과를 프린트
+        </p>
+        <code>
+            <pre>
+            <strong>정답</strong> 
+            for(let a=1;a&lt;=50;a++){
+                let stringValue = a.toString()
+                let result = ""
+                for(let b=0;b&lt;stringValue.length;b++){
+                    if(stringValue[b] == "3" ||stringValue[b] == "6" ||stringValue[b] == "9" ){
+                    result+="짝"
+                    }
+                }
+                console.log(result.length>0?result:a)
+                }
+            </pre>
+        </code>
+        <code>
+            <pre>
+            <strong>설명</strong> 
+            for(let a=0; a&lt;=50; a++){
+                <strong>a값이 50이하일때까지 a + 1 한다</strong>
+
+                let stringValue=a.toString();
+                <strong>a값을 문자화 한다</strong>
+
+                let result = "";
+            
+                for(let b=0; b&lt;stringValue.length; b++){
+                    <strong>b값이 a값의길이보다 작을때 까지 b + 1 한다.</strong>
+                    <strong>예시)a가 36일때 문자의 길이는 2이다.</strong>
+
+                    if(stringValue[b] == "3" || stringValue[b] == "6" || stringValue[b] == "9"){
+
+                        result+="짝"
+                        <strong>a값(stringValue)의 b번째 문자가 3,6,9일때 result 값에 "짝" 문자를 더한다</strong>
+                        console.log("b : " + b);
+                        console.log("stringValue[b] : "+stringValue[b]);
+
+                        console.log("stringValue[0] : "+stringValue[0]);
+                        console.log("stringValue[1] : "+stringValue[1]);
+                        <strong>stringValue.length[0] = a의 문자의 0번째 문자</strong>
+                        <strong>stringValue.length[1] = a의 문자의 1번째 문자</strong>
+                        <strong>예시)36의 0번째 문자는 3
+                             , 1번째 문자는 6 이다.</strong>
+
+                        console.log("result : " + result);
+                    }
+                
+                }
+                console.log("a : "+ a);
+                console.log("result.length : " + result.length)
+                <strong>result문자의 길이</strong>
+                
+                console.log(result.length>0?result:a)
+                <strong>result문자의 길이가 0보다 클때 result 값을 반환, 아닐경우 a값을 반환한다</strong>
+            </pre>
+        </code>
+    </section>
+    <section id="test4">
+        <h1>문제4</h1>
+        <p>
+            주어진 숫자가 소수이면 true, 아니면 false
+        </p>
+        <table>
+            <tr>
+                <th>1부터 100까지 소수</th>
+            </tr>
+            <tr>
+                <td>2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97</td>
+            </tr>
+        </table>
+        <code>
+            <pre>
+            let n =prompt("숫자를 입력하세요");
+            let isPrime =true;
+
+            for(let c=2; c&lt;n; c++){
+            if(n%c == 0){
+            isPrime = false;
+            <strong>n을 c로 나누었을때 남은값이 0이 한번이라도 있으면 소수가 아니다 </strong>
+            }
+         
+            console.log("c : " + c);
+            console.log("n%c : " + n%c);
+            console.log("isPrime : " + isPrime);
+            console.log("========")
+            }
+            console.log(isPrime);
+            </pre>
+        </code>
+    </section>
+
+
+    <script src="index10_For_While_Test.js"></script>
+</body>
+</html>

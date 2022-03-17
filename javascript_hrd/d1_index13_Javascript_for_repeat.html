@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+    <style>
+        div{
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            border: 1px dashed rgb(189, 189, 189);
+        }
+    </style>
+</head>
+<body>
+    <h2>반복문</h2>
+
+    <h4>반복문을 사용하지 않는 문</h4>
+    <code>
+        <pre>
+            var sum = 0;
+            sum += 1;
+            sum += 2;
+            sum += 3;
+            sum += 4;
+            sum += 5;
+            document.write("1부터 5까지의 합은" , sum , "입니다.");
+        </pre>
+    </code>
+
+    <h4>반복문(for)를 사용</h4>
+    <code>
+        <pre>
+            var i;
+            var add = 0;
+
+            for(i=0; i&lt;6; i++ ){
+                    add += i;
+            }
+            document.write(&quot;1부터 5까지의 합은&quot; , add , &quot;입니다&quot;.); 
+        </pre>
+    </code>
+
+    
+
+    <script>
+       var sum = 0;
+        sum += 1;
+        sum += 2;
+        sum += 3;
+        sum += 4;
+        sum += 5;
+       document.write("<p>1부터 5까지의 합은" , sum , "입니다.<br> 반복문 사용 X</p>");
+
+    // 반복문
+       var i;
+       var add = 0;
+
+       for(i=0; i<6; i++ ){
+            add += i;
+            console.log(i)
+       }
+       document.write("<p>1부터 5까지의 합은" , add , "입니다.<br> 반복문 사용 O </p>");
+
+    // 구구단
+       var a;
+       var b;
+
+       for(a = 2; a <= 9; a++){
+           document.write("<div>")
+
+            document.write("<h5>" , a , "단<h5>");
+            for(b = 1; b <= 9; b++){
+                document.write(a , "X" , b , "=" , a*b , "<br>");
+            }
+            document.write("</div>")
+      
+         }
+
+    </script>
+
+    <code>
+        <pre>
+            // 구구단
+            var a;
+            var b;
+
+            for(a = 2; a &lt;= 9; a++){
+                document.write("&lt;div&gt;")
+                    <b>
+                    document.write("&lt;h5&gt;" , a , "단&lt;h5&gt;");
+                    for(b = 1; b &lt;= 9; b++){
+                        document.write(a , "X" , b , "=" , a*b , "&lt;br&gt;");
+                    }
+                    </b>
+                document.write("&lt;/div&gt;")
+                }
+        </pre>
+    </code>
+
+    <!-- <script src="index01_Javascript.js"></script> -->
+
+</body>
+</html>

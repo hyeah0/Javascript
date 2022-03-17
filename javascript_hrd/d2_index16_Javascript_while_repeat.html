@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <code>
+        <pre>
+            var num = prompt('숫자를 입력하세요');
+            var numFact = 1;
+            var i = 1;
+    
+            document.write('while문을 이용한 팩토리얼 계산')
+            document.write('' , num , ' ! = 120')
+            document.write(' ', num , '')
+    
+            while(조건식){
+                // 명령문
+                // 증감식
+                i++;
+            }
+        </pre>
+    </code>
+
+    <!-- <h2>while문을 이용한 계산</h2> -->
+    <script>
+        var num = prompt('숫자를 입력하세요');
+        var numFact = 1;
+        var i = 1;
+
+        document.write('<h2>while문을 이용한 팩토리얼 계산</h2>')
+        document.write('<p>' , num , ' ! = 120 </p>')
+        document.write('<p> ', num , '</p>')
+
+        while(i <= num){
+            // 명령문
+            numFact *= i;
+            // 증감식
+            i++;
+
+            console.log( 'numFact :' ,numFact, 'i :',i);
+        }
+
+        document.write('<p>' , num , ' ! = ', numFact , '</p>')
+
+
+    </script>
+</body>
+</html>

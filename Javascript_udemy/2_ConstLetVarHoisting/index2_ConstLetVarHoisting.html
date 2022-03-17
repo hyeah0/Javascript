@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>const,let,var,hoisting</title>
+    <style>
+        dt{
+            background-color: yellow;
+            width: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>let.const</h2>
+    <p>
+        hoisting : 함수가 실행되기 전 변수들을 범위의 최상단으로 올리는것
+        
+    </p>
+    <div>
+        <ul>    
+            <li class="const">
+                <dl>
+                    <dt>
+                        const
+                    </dt>
+                    <dd> 
+                        상수 (변하지 않는 값)
+                    </dd>
+                </dl>
+            </li>
+            <li class="let">
+                <dl>
+                    <dt>
+                        let
+                    </dt>
+                    <dd> 
+                        1.ES6 자바스크립트 업그레이드 이후 나옴
+                    </dd>
+                    <dd>
+                        <strong> 
+                            2. 지역변수로 사용하면 지역변수로 사용됨(var와 상이)
+                        </strong>
+                    </dd>
+                    <dd>
+                        3. 함수 선언문 보다 실행문이 상단에 있을경우 <br>
+                        let 호이스팅이 되지만, 
+                        Temporal Death Zone(TDZ)으로 a 선언문이 나오기 전까지 에러 
+                        <code>
+                        <pre>
+                        console.log(a); 결과 = error
+                        let a = 2;
+                        console.log(a);
+                        </pre>
+                        </code>
+                    </dd>
+                </dl>
+            </li>
+            <li class="var">
+                <dl>
+                    <dt>
+                        var
+                    </dt>
+                    <dd> 
+                        1. ES6 자바스크립트 업그레이드 전
+                    </dd>
+                    <dd>
+                        2. 전역변수와 지역변수의 개념이 확실하지 않다.
+                    </dd>
+                    <dd>
+                        3. 동일 변수명도 실행이 가능
+                    <code>
+                    <pre>
+                    var a =1;
+                    console.log(a); 결과 = 1
+                    var a = 2;
+                    console.log(a); 결과 = 2
+                    </pre>
+                    </code>
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <dl>
+                    <dt>
+                        전역변수
+                    </dt>
+                    <dd> 
+                        블락 밖에서 선언을 한 변수(어디에서든 사용 가능)
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        지역변수
+                    </dt>
+                    <dd> 
+                        function이나, for문안에서 선언한 변수(블락 밖에서 사용이 불가능)
+                    </dd>
+                    <dd>
+                        <strong> 
+                            단! var 는 지역변수로 사용해도, 함수를 제외하고 전역변수로 사용됨
+                        </strong>
+                    </dd>
+                </dl>
+
+                
+            </li>
+        </ul>
+      
+        <script src="index2_ConstLetVarHoisting.js"></script>
+    </div>
+
+</body>
+</html>
