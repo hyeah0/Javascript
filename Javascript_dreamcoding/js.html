@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async / defer</title>
+    <!-- <script defer src="./js1_async_defer.js"></script> -->
+</head>
+<body>
+    <section class="script">
+        <h1>script</h1>
+        <p>script head 태그 안에 넣었을때, body안 가장 아래에 넣었을때</p>
+        <dl>
+            <dt>head 안에 넣었을때</dt>
+            <dd>js 파일이 크고 인터넷이 느릴때 홈페이지를 보는데까지 많은 시간이 소요된다 </dd>
+            <dt>body 가장 끝부분에 넣었을때</dt>
+            <dd>js 파일에 의존적인 홈페이지일 경우, 정상적인 홈페이지 보이기 까지 시간이 걸릴 수 있다.</dd>
+        </dl>
+    </section>
+    <section class="async_defer">
+        <h1>async / defer 차이</h1>
+        <p>head 안에 스크립트 태그사이에 위치</p>
+        <code>
+            <pre>
+            &lt;script <strong>async</strong> src="./js1_async_defer.js"&gt;&lt;/script&gt;
+            &lt;script <strong>defer</strong> src="./js1_async_defer.js"&gt;&lt;/script&gt;
+            </pre>
+        </code>
+        <dl>
+            <dt>async</dt>
+            <dd>다운받는 시간이 절약할 수 있지만, html 실행하는 동안 js가 덜 다운 받아졌다면 홈페이지 실행까지 시간이 걸릴 수 있다.</dd>
+            <dt>defer</dt>
+            <dd>html실행하는 동안 js다운로드 진행</dd>
+        </dl>
+    </section>
+    <section class="hoisting">
+        <h1>호이스팅</h1>
+        <dl>
+            <dt>호이스팅이란?</dt>
+            <dd>어디에 선언했는지 상관없이 가장 위로 선언문을 올려 실행하는 것</dd>
+        </dl>
+    </section>
+    <section class="equality">
+        <dl>
+            <dt>==</dt>
+            <dd>loose equality</dd>
+            <dd>타입을 변경</dd>
+            <dt>===</dt>
+            <dd>strict equality</dd>
+            <dd>타입이 다르면 같지 않다.</dd>
+        </dl>
+        <code>
+            <pre>
+            const numfive = 5;
+            const strfive = '5';
+            
+            console.log(numfive == strfive); = true
+            console.log(numfive != strfive); = false
+            
+            console.log(numfive === strfive); = false
+            console.log(numfive !== strfive); = true
+            </pre>
+        </code>
+    </section>
+    <section class="if">
+        <h1>if 축약버전</h1>
+        <code>
+            <pre>
+            // if 축약
+            // ternary operator : ? 
+            // condition ? value 1 : value 2 ;
+            // condition 이 true 일때 value 1 반환
+            
+            console.log(ifName === 'Lee' ? `이름이 ${ifName} 입니다. ` : `이름이 ${ifName} 아닙니다. `);
+            </pre>
+        </code>
+    </section>
+    <section class="function">
+        <h1>function</h1>
+        <dl>
+            <dt>function</dt>
+                <dd>fundamental building block in the program</dd>
+                <dd>subprogram can be used multiple times</dd>
+                <dd>performs a task or calculates a value</dd>
+            <dt>function declaration</dt>
+                <dd>function name(param1, param2){return};</dd>
+                <dd>one function === one thing</dd>
+                <dd>naming : do somthing, command, verb</dd>
+                <dd>function is object</dd>
+        </dl>
+    </section>
+    <script src="./js2_datatypes_hoisting.js"></script>
+    <script src="./js3_eqality.js"></script>
+    <script src="./js4_if.js"></script>
+    <script src="./js5_function.js"></script>
+</body>
+</html>
