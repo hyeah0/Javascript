@@ -87,8 +87,106 @@
                 <dd>function name(param1, param2){return};</dd>
                 <dd>one function === one thing</dd>
                 <dd>naming : do somthing, command, verb</dd>
-                <dd>function is object</dd>
+                <dd>function is object</dd>         
         </dl>
+    <section class="earlyreturn">
+        <h1>조건이 맞지 않을 경우를 먼저 작성하여 빨리 리턴하기</h1>
+        <pre>
+            <strong>good case</strong>
+            if(user.point <= 10){
+                return;
+            }else{
+
+            }
+
+            <strong>bad case</strong>
+            if(user.point >= 10){
+                console.log()
+            }else{
+                
+            }
+        </pre>
+    </section>
+    <section class="callback-function">
+        <h1>callback function</h1>
+        <code>
+            <pre>
+            // callback function using function expression
+
+            function randomQuiz(answer, printYes, printNo){
+                if(answer === 'love you'){
+                    printYes();
+                }
+                else{
+                    printNo();
+                }
+            }
+
+            const printYes = function(){
+                console.log('yes!');
+            };
+
+            const printNo = function printN(){
+                console.log('no!');
+                // printN();
+            }
+            //nameed function
+            //함수안에서 함수 자신을 부를때,
+            //피보나치수나, 반복되는 평균값을 구할때
+
+            randomQuiz('love you', printYes, printNo);
+            randomQuiz('i do not love you', printYes, printNo);
+            </pre>
+        </code>
+    </section>
+    <section class="arrow-function">
+        <h1>arrow function</h1>
+        <code>
+            <pre>
+            const dontUseArrow = function(){
+                console.log('do not use arrow function!');
+            }
+            const useArrow = () => console.log('use arrow function!');
+            dontUseArrow();
+            useArrow();
+            </pre>
+        </code>
+        <ol class = "arros-function-type">
+            <li>
+                <code>
+                const add1 = (e,f) => e + f;</br>
+                const addResult = add1(3,4);</br>
+                console.log(addResult); == 7
+                </code> 
+            </li>
+            <li>
+                <code>
+                    const add3 = (e,f) => {
+                        return e + f;
+                    };
+                </code> 
+            </li>
+            <li>
+                <code>
+                    const add2 = function(e,f){
+                        return e + f;
+                    };
+                </code> 
+            </li>
+        </ol>
+        <ol class = "return-value">
+            <li>
+                <code>
+                <pre>
+                function sum(a,b){
+                    return a+b;
+                }
+                const result = sum(2,4);
+                console.log(`sum : ${result}`);  
+                </pre>
+                </code>
+            </li>
+        </ol>
     </section>
     <script src="./js2_datatypes_hoisting.js"></script>
     <script src="./js3_eqality.js"></script>
