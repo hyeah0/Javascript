@@ -7,10 +7,34 @@
     <title>자바스크립트</title>
 </head>
 <body>
-    object 와 class 차이
-    class 는 fields와 methods가 같이 들어가 있음
-    객체지향언어 : 캡슐화
-    class = 틀만 정의 해놓음 template 
-    <script src="js6_object.js"></script>
+    <h1>object 와 class 차이</h1>
+    <p>
+        class 는 fields와 methods가 같이 들어가 있음 <br>
+        class = 틀만 정의 해놓음 template <br>
+        객체지향언어 : 캡슐화
+    </p>
+    <code>
+        <pre>
+            class Person {
+                //constructor(생성자 : 오브젝트를 만들때 필요한것)
+                constructor(name,age){
+                     //fields
+                    this.name = name;
+                    this.age = age;
+                }
+               
+                //methods
+                speak(){
+                    console.log(`${this.name} hi`);
+                }
+            
+            }
+            
+            const kim = new Person('kim',20);
+            console.log(kim.name);  === kim
+            kim.speak();  ==== kim hi
+        </pre>
+    </code>
+    <script src="js6_class.js"></script>
 </body>
 </html>
