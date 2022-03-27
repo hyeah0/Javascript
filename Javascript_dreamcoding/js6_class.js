@@ -7,7 +7,7 @@
 
 //1. class 선언 방법
 
-class Person {
+class PersonA{
     //constructor(생성자 : 오브젝트를 만들때 필요한것)
     constructor(name,age){
          //fields
@@ -22,7 +22,7 @@ class Person {
 
 }
 
-const kim = new Person('kim',20);
+const kim = new PersonA('kim',20);
 console.log(kim.name);
 kim.speak();
 
@@ -110,3 +110,4 @@ console.log(retangle.getArea());
 const triangle = new Triangle(30,30,'pink');
 triangle.draw();
 console.log(triangle.getArea());
+console.log('==================');
