@@ -1,6 +1,6 @@
 'use strict';
 
-// Array🎉
+// Array
 
 // 1. Declaration
 const arr1 = new Array();
