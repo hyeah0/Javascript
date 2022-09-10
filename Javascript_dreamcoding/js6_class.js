@@ -76,7 +76,7 @@ Article.printPublisher();
 //클래스 자체에 객체가 지정
 
 
-//반복되는 함수 extense
+//반복되는 함수 extends
 
 class Shape {
     constructor(width, height, color){
