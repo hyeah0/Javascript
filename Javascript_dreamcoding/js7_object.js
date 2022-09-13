@@ -12,6 +12,7 @@ console.log('==오브젝트 만드는법 2 가지==');
 // 1.'object literal' syntax
  const obj1 = {key1:'value1', key2:'value2'}; 
  console.log(obj1);
+
 // 2.'object constructor' syntax 클래스를 이용한 방법
  class Object{
    constructor(classObjectKey1,classObjectKey2){
@@ -27,7 +28,7 @@ console.log('==오브젝트 만드는법 2 가지==');
  obj2.classTest();
 
 
- console.log('==functio을 사용하여 object 호출==');
+ console.log('==function을 사용하여 object 호출==');
  function print(person) {
    console.log(person.name);
    console.log(person.age);
