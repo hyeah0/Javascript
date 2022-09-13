@@ -8,7 +8,7 @@ function changeColor(){
    p.style.color = 'red';
 }
 
-document.querySelector(#change).onclick = function(){
+changeBtn.onclick = function(){
     var p = documment.quer(p)
     
 }
