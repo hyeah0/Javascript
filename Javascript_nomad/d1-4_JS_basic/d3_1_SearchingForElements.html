@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript_노마드코더</title>
+</head>
+<body>
+    <p>javacript [document.]은 html에 접근할 수 있다(읽을 수 있다.).</p>
+    <section class="howToSearchId">
+        <h1 autofocus id="text1I" class="text1C">Test</h1>
+        <code>
+        <pre>
+        const text1 = document.getElementById("text1I");
+        console.log(text1);
+        console.dir(text1);
+        
+        console.log(text1.id);
+        console.log(text1.className); 
+        text1.innerText="change Text";
+        </pre>
+        </code>
+        <ol>
+            <li>
+                const text1 = document.getElementById("text1I");<br/>
+                text1 변수에 html id가 text1I을 할당한다
+            </li>
+            <li>
+                console.log(text1);<br/>
+                text1 값을 가져온다<br/>
+                console.dir(text1);<br/>
+                text1 객체(object)을 가져온다
+            </li>
+            <li>
+                console.log(text1.id);<br/>
+                text1의 id 명을 가져온다<br/>
+                console.log(text1.className);<br/>
+                text1의 class 명을 가져온다 
+            </li>
+            <li>
+                text1.innerText="change Text";<br/>
+                text1 값의 text를 change text로 변경한다
+            </li>
+        </ol>
+    </section>
+    <section class="howToSearchElements">
+        <div class="text2">
+            <h1>text1</h1>
+            <h1>text2</h1>
+            <h1>text3</h1>
+            <h1>text4</h1>
+        </div>
+        <code>
+        <pre>
+        const text2 = document.getElementsByTagName("h1");
+        console.log(text2);
+
+        const text2_1 =document.querySelector(".text2");
+        console.log(text2_1);
+
+        const text2_2 = document.querySelector(".text2 h1");
+        console.log(text2_2);
+        
+        const text2_3 = document.querySelectorAll(".text2 h1");
+        console.log(text2_3);
+        </pre>
+        </code>
+        <ol>
+            <li class="getElementsByTagName">
+                <dl>
+                    <dt>getElementsByTagName</dt>
+                    <dd>html 특정 태그를 가지고 오고 싶을때</dd>
+                </dl>
+            </li>
+            <li class="queryselector">
+                <dl>
+                    <dt>querySelector</dt>
+                    <dd>
+                        id를 가져올때는 "#id명", class를 가져올때는 ".class명"
+                    </dd>
+                    <dd>
+                        css처럼 부모요소 아래 하위 요소 가져올때
+                        동일태그 자식이 많을 경우 첫번째만 확인이 가능하다
+                    </dd>
+                </dl>
+            </li>     
+            <li class="querySelectorAll">
+                <dl>
+                    <dt>querySelectorAll</dt>
+                    <dd>
+                        css처럼 부모요소 아래 하위 요소 가져올때
+                        동일태그 자식이 많을 경우, 자식들 모두 확인하고 싶을때<strong>querySelectorAll</strong>사용한다
+                    </dd>
+                    <dd>
+                        특정 자식만 확인하고 싶을때
+                        <strong>console.log(text2_3[2]);</strong>
+                    </dd>
+                </dl>
+            </li>
+            <!-- <li class="">
+                <dl>
+                    <dt></dt>
+                    <dd></dd>
+                </dl>
+            </li> -->
+        </ol>
+    </section>
+    <script src="d3_1_SearchingForElements.js"></script>
+</body>
+</html>

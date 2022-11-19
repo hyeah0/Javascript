@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript_노마드코더</title>
+</head>
+<body>
+    <ul>
+        <li> prompt
+            <dl>
+                <dt>prompt_현재는 잘 사용하지 않음</dt>
+                <dd>
+                    prompt("팝업창 메세지")
+                    <code>
+                    <pre>
+                    const age = prompt("how old are you?");
+                    console.log(age);
+                    console.log(typeof age);
+
+                    age 값의 type을 보려면 typeof사용
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li>
+        <li> type 변경하는 법(string -> integer)
+            <dl>
+                <dt>parseInt</dt>
+                <dd>
+                    Converts a string to an integer.
+                    <code>
+                    <pre>
+                    console.log(typeof "15", typeof parseInt("15") );
+
+                    string number
+                    </pre>
+                    </code>
+                    NaN = not a Number
+                </dd>
+            </dl>
+        </li>
+        <li> parseInt
+            <dl>
+                <dt>
+                    prompt 값 number type 으로 변경<br/>
+                    parseInt( prompt(""))</dt>
+                <dd>
+                    
+                    <code>
+                    <pre>
+                    const age = parseInt( prompt("how old are you?"));
+                    console.log(typeof age);
+                    
+                    number
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li>
+        <li> isNaN
+            <dl>
+                <dt>isNaN</dt>
+                <dd>
+                    isNaN(5)--가로안에 값이 숫자면 false, 아닐경우 true
+                    <code>
+                    <pre>
+                    console.log(isNaN(5));
+                    console.log(isNaN("가나다"));
+
+                    false
+                    true
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li>
+        <li> if
+            <dl>
+                <dt>if</dt>
+                <dd>
+                    <code>
+                    <pre>
+                    const a = 6;
+                    const b = "abc";
+                    
+                    if(isNaN(a)){
+                        console.log( a, "는 숫자가 아닙니다.")
+                    }
+                    else{
+                        console.log( a, "은 숫자 입니다.")
+                    }
+                    
+                    if(isNaN(b)){
+                        console.log( b, "는 숫자가 아닙니다.")
+                    }
+                    else{
+                        console.log( b, "은 숫자 입니다.")
+                    }
+
+                    6 은 숫자입니다.
+                    abc 는 숫자가 아닙니다.
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li>
+        <li> 
+            <dl>
+                <dt></dt>
+                <dd>
+                    
+                    <code>
+                    <pre>
+                   
+                    </pre>
+                    </code>
+                </dd>
+            </dl>
+        </li>
+    </ul>
+    <script src="d2_2_conditionals.js"></script>
+</body>
+</html>
