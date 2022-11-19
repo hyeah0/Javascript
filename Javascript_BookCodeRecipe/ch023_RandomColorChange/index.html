@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 500px;
+            margin: auto;
+        }
+
+        .rectangle{
+            width: 100%;
+            height: 500px;
+            /* start, end == css 변수이다. */
+            --start: hsl(0, 100%, 50%);
+            --end: hsl(322, 100%, 50%);
+            background-image: linear-gradient(-133deg, var(--start), var(--end));
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 버튼 클릭시 색상이 랜덤으로 바뀜 -->
+        <button class="button" onclick="onClickButton()">색상변경</button>
+        <div class="rectangle">
+            <p class="start">-</p>
+            <p class="end">-</p>
+        </div>
+        <div>
+            <h3>랜덤함수 사용하기 : Math.random()</h3>
+            <p>랜덤값 : <span class="randomSpan"> </span> </p>
+            <p>0~100 이상의 랜덤 정수 : <span class="randomSpanFloor"> </span>  </p>
+            <p>10이상 20미만 랜덤 정수 : <span class="randomSpanBetween"> </span>  </p>
+        </div>
+    </div>
+
+    <script>
+        let randomSpan = document.querySelector(".randomSpan");
+        let randomSpanFloor = document.querySelector(".randomSpanFloor");
+        let randomSpanBetween = document.querySelector(".randomSpanBetween");
+        
+        let random = Math.random();
+        randomSpan.textContent = random;
+        randomSpanFloor.textContent = Math.floor(random*100);
+        randomSpanBetween.textContent = 10 + Math.floor(Math.random()*10)
+    </script>
+
+    <script>
+        const rectangle = document.querySelector('.rectangle');
+
+        function onClickButton(){
+            let start = document.querySelector(".start");
+            let end = document.querySelector(".end");
+            
+            // 0~359 사이 랜덤 값
+            const randomHue = Math.trunc(Math.random() * 360);
+
+            // 그라데이션 시작, 끝 랜덤 색상
+            const randomColorStart = `hsl(${randomHue}, 100%, 50%)`;
+            const randomColorEnd = `hsl(${randomHue+100}, 100%, 50%)`;
+
+            // 랜덤 값 화면에 넣기
+            start.textContent = randomColorStart;
+            end.textContent = randomColorEnd;
+
+            // 랜덤 값 css 적용하기
+            rectangle.style.setProperty('--start', randomColorStart);
+            rectangle.style.setProperty('--end', randomColorEnd);
+
+        }
+
+    </script>
+</body>
+</html>
