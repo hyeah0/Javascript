@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .character{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .character img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="character">
+        <img src="/Javascript_BookCodeRecipe/resource/ch25.png">
+    </div>
+    <div>
+        <p>degree : <span class="degree1"> </span> </p>
+        <p>rotation : <span class="rotation1"> </span> </p>
+        <p>targetX1 : <span class="targetX1"> </span> </p>
+        <p>targetY1 : <span class="targetY1"> </span> </p>
+    </div>
+    <script>
+        const character = document.querySelector(".character");
+        let degree = 0;
+
+        // loop 개시
+        loop();
+
+        // 화면이 시작될때마다 실행 함수
+        function loop(){
+            // 회전각
+            const rotation = (degree * Math.PI)/180;
+
+            // 회전각으로 위치 구하기
+            const targetX = window.innerWidth/ 2 + 100 * Math.cos(rotation) - 50;
+            const targetY = window.innerHeight/ 2 + 100 * Math.sin(rotation) - 50;
+
+            character.style.left = `${targetX}px`;
+            character.style.top = `${targetY}px`;
+
+            // 각도 1도 증가
+            degree += 1;
+
+            // 다음 화면 갱신 타이밍에서 loop() 실행
+            requestAnimationFrame(loop);
+
+            document.querySelector(".degree1").textContent = degree;
+            document.querySelector(".rotation1").textContent = rotation;
+            document.querySelector(".targetX1").textContent = targetX;
+            document.querySelector(".targetY1").textContent = targetY;
+        }
+
+
+    </script>
+</body>
+</html>
