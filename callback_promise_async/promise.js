@@ -1,27 +1,17 @@
-/*
-    promise : 자바스크립트 안 내장 객체
-              비동기 수행시 callback 함수 대신 사용
-
-    1. 상태(state)
-    pending -> fulfilled or rejected
-
-    2. 제공자 vs 사용자 (Producer vs Consumer )
-*/
-
 // 1. Producer
 // promise를 생성하는 순간 바로 실행(executor 함수가 실행) : 사용자가 요구하지 않았는데 실행되는 점은 유의
-const promis = new Promise((resolve, reject) =>{
+const promise = new Promise((resolve, reject) =>{
     console.log('promise')
 
     setTimeout(() => {
-        // resolve('success')                            // 기능 수행시 resolve 콜백함수 호출
+        //resolve('success')                            // 기능 수행시 resolve 콜백함수 호출
         reject(new Error('no network : 에러 사유 명시'))    // 에러 
     }, 2000);
 })
 
 
 // 2. Consumers : then, catch, finally
-promis
+promise
     .then((value) => {      // promise가 잘 수행 될 경우 resolve 호출 
         console.log(value)
     })
